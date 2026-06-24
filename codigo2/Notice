@@ -1,0 +1,51 @@
+{
+  "name": "Notice",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do aviso"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado do aviso"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "general",
+        "maintenance",
+        "meeting",
+        "event",
+        "rule",
+        "emergency"
+      ],
+      "default": "general",
+      "description": "Categoria do aviso"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "important",
+        "urgent"
+      ],
+      "default": "normal",
+      "description": "Prioridade"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de expira\u00e7\u00e3o"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Se o aviso est\u00e1 ativo"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
